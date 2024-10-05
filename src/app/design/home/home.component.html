@@ -1,0 +1,38 @@
+  <main *ngIf="homepages">
+    <header>
+      <h2>Home</h2>
+      <button (click)="goToGestureScreen()"><img src="./assets/img/more.svg" alt="more-icon" /></button>
+    </header>
+    <section class="body">
+      <h2 class="title"></h2>
+      <div class="scroll-container">
+        <button class="prev" [disabled]="disablePrevious" (click)="getPreviousData()">❮</button>
+        <div class="scroll-area">
+          <div *ngFor="let profile of storedProfiles.slice(startIndex, startIndex + 4); let i = index" class="card-view">
+            <span class="cursor" (click)="goToProfileDetails(profile.id)">
+              <img [src]="profile.photo" [alt]="profile.name" />
+            </span>
+            <div class="content">
+              <h3>Name: <span class="data-color">{{profile.name}}</span></h3>
+              <p>{{ profile.description }}</p>
+              <div class="btn-div">
+                <button (click)="removeProfile(i, 'Yes')">Yes</button>
+                <button (click)="removeProfile(i, 'No')">No</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <button class="next" [disabled]="disableNext" (click)="getNextData()">❯</button>
+      </div>
+    </section>
+  </main>
+
+   <div *ngIf="gentures">
+   <app-gesture></app-gesture>
+   </div>
+   <div *ngIf="profile">
+    <app-profile-details [profileDetailsimage]="selectedProfileimage"></app-profile-details>
+   </div>
+
+   

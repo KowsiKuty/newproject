@@ -1,0 +1,30 @@
+<div class="gesture-container" *ngIf="gesture">
+  <mat-toolbar  class="fixed-toolbar">
+      <mat-icon class="back_mat" (click)="goBack()"><b>arrow_back</b></mat-icon>
+     &nbsp;
+    <span>Gesture Screen</span>
+  </mat-toolbar>
+  <h2 class="title"></h2>
+  <div class="card_toatal mt-4">
+    <div class="container ">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card" *ngFor="let profile of visibleProfiles">
+            <img [src]="profile.photo" class="card-img-top" alt="{{ profile.name }}">
+            <div class="card-body">
+              <h5 class="card-title profile-name">Name: <span class="data-color">{{ profile.name }}</span></h5>
+              <p class="card-text"><Details>{{ profile.description }}</Details></p>
+              <div class="btn-div button-space">
+              <button (click)="removeProfile(profile.id, 'Yes')"><span class="material-icons">check</span></button>
+              <button (click)="removeProfile(profile.id, 'No')"><span class="material-icons">close</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="homepage">
+  <app-home></app-home>
+</div>

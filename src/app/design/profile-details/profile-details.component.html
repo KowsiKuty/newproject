@@ -1,0 +1,20 @@
+<div class="profile-details-container" *ngIf="profile">
+    <mat-toolbar class="fixed-toolbar">
+        <mat-icon class="back_mat" (click)="goBack()"><b>arrow_back</b></mat-icon>
+        &nbsp;
+      <span>Profile Details</span>
+    </mat-toolbar>
+  <div class="cards">
+    <div class="carousel">
+      <img [src]="profileDetails.photo" alt="{{profileDetails.name}}" class="profile-image slide">
+    </div>
+    <div class="profile-info">
+      <h3>Name: <span class="data-color">{{profileDetails.name}}</span></h3>
+      <p>{{profileDetails.description}}</p>
+    </div>
+  </div>
+
+  </div>
+  <div *ngIf="homepage">
+    <app-home ></app-home>
+  </div>

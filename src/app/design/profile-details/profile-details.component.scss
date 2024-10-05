@@ -1,0 +1,35 @@
+.cards {
+    border: 2px solid black;
+    padding: 2% !important;
+    max-width: 300px !important;
+    margin-left: 40% !important;
+    margin-top: 3% !important;
+  }
+
+.carousel {
+  width: 100%;
+  height: auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+}
+
+.data-color{
+  color: blue;
+}
+details{
+  cursor: pointer;
+}
+.mat-toolbar {
+  color: #fff;
+}
+.back_mat{
+  color: black;
+  cursor: pointer;
+}
+.fixed-toolbar{
+  background-color:#5c5cfb;
+}

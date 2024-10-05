@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  background-color: #5c5cfb;
+  color: white;
+}
+
+header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+header img {
+  width: 28px;
+}
+
+.body {
+  padding: 24px;
+}
+
+.body .title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.body .scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.body .scroll-container .scroll-thumb {
+  width: 34px;
+}
+
+.body .scroll-container .scroll-area {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 28px;
+  padding: 20px 28px;
+  // overflow-x: scroll;
+}
+
+.body .card-view {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.197);
+  border-radius: 8px;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.body .card-view .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 24px 18px;
+}
+
+.body .card-view .content h3 {
+  font-size: 14px;
+}
+
+.body .card-view img {
+  width: 100%;
+}
+
+.body .card-view .content .btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.body .card-view .content .btn-div button {
+  padding: 4px 10px;
+  border: none;
+  background-color: #5c5cfb;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.body h2 {
+  font-size: 24px;
+}
+
+  .prev, .next {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev[disabled], .next[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .cursor{
+    cursor: pointer;
+  }
+  .data-color{
+    color: blue;
+  }
